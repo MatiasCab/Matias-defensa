@@ -1,3 +1,5 @@
+using System;
+
 namespace Ucu.Poo.Defense
 {
     public class Residue
@@ -36,6 +38,24 @@ namespace Ucu.Poo.Defense
                 return this.Type.Equals(((Residue)obj).Type) &&
                     this.Name.Equals(((Residue)obj).Name);
             }
+        }
+
+        public bool Equals( Residue residue)
+        {
+            if (residue == null)
+            {
+                return false;
+            }else
+            {
+                if (this.Name == residue.Name && this.Type == residue.Type)
+                {
+                    return true;
+                }else
+                {
+                    return false;
+                }
+            }
+
         }
     }
 }
